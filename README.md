@@ -138,22 +138,22 @@ docker image ls
 
 ## 🖼️ Screenshot Gallery
 
-| 📸 Description             | Preview                                 |
-| -------------------------- | --------------------------------------- |
-| Jenkins Job Console Output | ![Console Output](./console_output.png) |
-| Shell Script Execution     | ![Shell](./ex_shell.png)                |
-| Jenkins Login Page         | ![Login](./jenkins_login_page.png)      |
-| Jenkins Project Setup      | ![Project](./jenkins_project_name.png)  |
-| Web App Running            | ![Web](./web_page.png)                  |
-| GitHub Webhook Setup       | ![Webhook](./webhook.png)               |
-| Webhook Delivery Success   | ![Webhook Done](./webhook_done.png)     |
+| 📸 Step                         | Preview                                 |
+|----------------------------------|------------------------------------------|
+| 1️⃣ Jenkins Login Page           | ![Login](./jenkins_login_page.png)      |
+| 2️⃣ Jenkins Project Setup        | ![Project](./jenkins_project_name.png)  |
+| 3️⃣ GitHub Webhook Setup         | ![Webhook](./webhook.png)               |
+| 4️⃣ Webhook Delivery Success     | ![Webhook Done](./webhook_done.png)     |
+| 5️⃣ Shell Script Execution       | ![Shell](./ex_shell.png)                |
+| 6️⃣ Jenkins Job Console Output   | ![Console Output](./console_output.png) |
+| 7️⃣ Web App Running              | ![Web](./web_page.png)                  |
 
 ---
 
 ## 🔍 What I Learned
 
 * 🔁 How to create a complete CI/CD  using Jenkins & GitHub
-* 🐳 Docker container lifecycle automation with Jenkins
+* 🐳 Docker container lifecycle automation with Jenkin
 * 🧠 Webhook-based automatic deployment on every Git push
 * 🧰 Debugging Jenkins errors and Docker port issues
 * 🚀 Running a live Flask app in Docker from Jenkins
