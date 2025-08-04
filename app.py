@@ -22,7 +22,7 @@ def home():
         </head>
         <body>
             <h1>🚀 CI/CD Flask App</h1>
-            <p>Deployed with Jenkins + Docker on port 5000!</p>
+            <p> Deployed with Jenkins + Docker on port 5000!</p>
         </body>
         </html>
     """)
