@@ -7,7 +7,8 @@ This project demonstrates a complete **CI/CD ** built using **Jenkins**, **Docke
 
 ## 🌟 Final Output
 
-![Web App Running](./web_page.png)
+![Web App Running]<img width="1861" height="973" alt="web_page" src="https://github.com/user-attachments/assets/1e8b8720-a676-4710-a209-38848ced8605" />
+
 
 🔗 **Live App**: http://<your-ec2-ip>:5000  
 🔗 **GitHub Repo**: https://github.com/bobhatevishal/jenkins-python-flask-app
