@@ -1,0 +1,127 @@
+Started by GitHub push by bobhatevishal
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/jenkins_python_flask_app
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/bobhatevishal/jenkins-python-flask-app.git
+ > git init /var/lib/jenkins/workspace/jenkins_python_flask_app # timeout=10
+Fetching upstream changes from https://github.com/bobhatevishal/jenkins-python-flask-app.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/bobhatevishal/jenkins-python-flask-app.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/bobhatevishal/jenkins-python-flask-app.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 3dee0e643c315fdee8103c5c423b82d8ab9f834d (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3dee0e643c315fdee8103c5c423b82d8ab9f834d # timeout=10
+Commit message: "Update app.py"
+First time build. Skipping changelog.
+[jenkins_python_flask_app] $ /bin/sh -xe /tmp/jenkins6158260923581255031.sh
++ docker rm -f flask-app
+Error response from daemon: No such container: flask-app
++ docker rmi flask-docker-image
+Error response from daemon: No such image: flask-docker-image:latest
++ true
++ docker build -t flask-docker-image .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  71.17kB
+Step 1/6 : FROM python:3.9-slim
+3.9-slim: Pulling from library/python
+59e22667830b: Pulling fs layer
+91067d9e3807: Pulling fs layer
+02ba7daa58b6: Pulling fs layer
+58b24570cddd: Pulling fs layer
+58b24570cddd: Waiting
+02ba7daa58b6: Verifying Checksum
+02ba7daa58b6: Download complete
+59e22667830b: Verifying Checksum
+59e22667830b: Download complete
+58b24570cddd: Verifying Checksum
+58b24570cddd: Download complete
+91067d9e3807: Verifying Checksum
+91067d9e3807: Download complete
+59e22667830b: Pull complete
+91067d9e3807: Pull complete
+02ba7daa58b6: Pull complete
+58b24570cddd: Pull complete
+Digest: sha256:4b826e2ca2191c24a03bdbf0c342a73c6ee4ce929eac5ebc47fef78f66b839d6
+Status: Downloaded newer image for python:3.9-slim
+ ---> 563a905f7a66
+Step 2/6 : WORKDIR /app
+ ---> Running in 3bc88d429afb
+ ---> Removed intermediate container 3bc88d429afb
+ ---> d8f7e1406d13
+Step 3/6 : COPY . .
+ ---> 38710b4381b4
+Step 4/6 : RUN pip install --upgrade pip && pip install -r requirements.txt
+ ---> Running in a62a69a60d81
+Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+Collecting pip
+  Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 29.6 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-25.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0mCollecting flask (from -r requirements.txt (line 1))
+  Downloading flask-3.1.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting blinker>=1.9.0 (from flask->-r requirements.txt (line 1))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from flask->-r requirements.txt (line 1))
+  Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting importlib-metadata>=3.6.0 (from flask->-r requirements.txt (line 1))
+  Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting itsdangerous>=2.2.0 (from flask->-r requirements.txt (line 1))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from flask->-r requirements.txt (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from flask->-r requirements.txt (line 1))
+  Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting werkzeug>=3.1.0 (from flask->-r requirements.txt (line 1))
+  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1))
+  Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Downloading flask-3.1.1-py3-none-any.whl (103 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading click-8.1.8-py3-none-any.whl (98 kB)
+Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+Installing collected packages: zipp, markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, importlib-metadata, flask
+
+Successfully installed blinker-1.9.0 click-8.1.8 flask-3.1.1 importlib-metadata-8.7.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.2 werkzeug-3.1.3 zipp-3.23.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[0m ---> Removed intermediate container a62a69a60d81
+ ---> a4728630f8c3
+Step 5/6 : EXPOSE 5000
+ ---> Running in 657fa3c26b63
+ ---> Removed intermediate container 657fa3c26b63
+ ---> 0152e53afadd
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in 0714f915f847
+ ---> Removed intermediate container 0714f915f847
+ ---> 36d535fcfc21
+Successfully built 36d535fcfc21
+Successfully tagged flask-docker-image:latest
++ docker run -d -p 5000:5000 --name flask-app flask-docker-image
+04e04f24391964c2e1bb36aec7d7051f47aed3d349261932e5c1e6a9c7782900
++ docker image ls
+REPOSITORY           TAG        IMAGE ID       CREATED        SIZE
+flask-docker-image   latest     36d535fcfc21   1 second ago   144MB
+python               3.9-slim   563a905f7a66   2 months ago   126MB
++ docker container ls
+CONTAINER ID   IMAGE                COMMAND           CREATED        STATUS                  PORTS                                       NAMES
+04e04f243919   flask-docker-image   "python app.py"   1 second ago   Up Less than a second   0.0.0.0:5000->5000/tcp, :::5000->5000/tcp   flask-app
+Finished: SUCCESS
